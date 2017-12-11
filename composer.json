@@ -18,11 +18,7 @@
     ],
     "require": {
         "php": "~5.6|~7.0",
-        "guzzlehttp/guzzle": "^6.2@dev",
-        "illuminate/support": "5.*",
-        "jaredchu/jc-request": "dev-master",
-        "laravelcollective/remote": "5.*",
-        "mockery/mockery": "^1.0"
+        "laravelcollective/remote": "5.*"
     },
     "autoload": {
         "psr-4": {
@@ -46,5 +42,8 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0"
     }
 }
