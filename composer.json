@@ -1,0 +1,28 @@
+{
+    "name": "Jgile/Remote",
+    "description": "Extension of",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*",
+        "laravelcollective/remote": "5.*"
+    },
+    "author": {
+        "name": "John Gile ",
+        "email": "jgile@cliquestudios.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jgile\\Remote\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jgile\\Remote\\RemoteServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
