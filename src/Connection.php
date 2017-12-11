@@ -58,7 +58,7 @@ class Connection extends \Collective\Remote\Connection
         }
 
         return function ($line) {
-            $this->storeOutput($line);
+            $this->processOutput($line);
         };
     }
 
@@ -82,7 +82,7 @@ class Connection extends \Collective\Remote\Connection
      * Save output to $this->stored_output
      * @param $output
      */
-    public function storeOutput($output)
+    public function processOutput($output)
     {
         $this->stored_output = $this->stored_output.$output;
     }
