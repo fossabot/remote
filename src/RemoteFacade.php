@@ -6,5 +6,8 @@ use Illuminate\Support\Facades\Facade;
 
 class RemoteFacade extends Facade
 {
-    protected static function getFacadeAccessor() { return 'jgile-remote'; }
+    protected static function getFacadeAccessor()
+    {
+        return 'jgile-remote';
+    }
 }

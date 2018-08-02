@@ -20,7 +20,7 @@ class Connection extends \Collective\Remote\Connection
      * Run a set of commands against the connection.
      *
      * @param string|array $commands
-     * @param \Closure     $callback
+     * @param \Closure $callback
      *
      * @return $this
      */
@@ -58,7 +58,7 @@ class Connection extends \Collective\Remote\Connection
         }
 
         return function ($line) {
-            $this->storeOutput($line);
+            $this->processOutput($line);
         };
     }
 
@@ -75,16 +75,16 @@ class Connection extends \Collective\Remote\Connection
      */
     public function getOutputString()
     {
-        return (string) $this->stored_output;
+        return (string)$this->stored_output;
     }
 
     /**
      * Save output to $this->stored_output
      * @param $output
      */
-    public function storeOutput($output)
+    public function processOutput($output)
     {
-        $this->stored_output = $this->stored_output . $output;
+        $this->stored_output = $this->stored_output.$output;
     }
 
     /**
@@ -116,7 +116,8 @@ class Connection extends \Collective\Remote\Connection
     /**
      * @return bool
      */
-    public function hasErrors(){
+    public function hasErrors()
+    {
         return str_contains(strtolower($this->getOutputString()), "error");
     }
 
